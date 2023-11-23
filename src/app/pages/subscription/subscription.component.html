@@ -1,0 +1,39 @@
+<section id="prices">
+    <div class="subscription-container">
+        <div class="subscription-context">
+            <div class="subscription-title">
+                <h1>Planos para toda sua jornada.</h1>
+                <div class="subscription-subtitle">
+                    <span>Inicie sua jornada escolhendo o plano que melhor se encaixa no seu negócio!</span>
+                </div>
+            </div>
+            <div class="subscription-cta">
+                <button>VER MAIS SOBRE OS PLANOS</button>
+            </div>
+
+            <div class="plains">
+                <ng-container *ngFor="let sub of subscriptions">
+                    <div class="plains-context" *ngIf="sub.isActive">
+                        <div class="plains-category">
+                            <span>{{sub.type}}</span>
+                        </div>
+                        <div class="plains-price">
+                            <h1>R${{sub.price}}<span>/mês</span></h1>
+                        </div>
+                        <div class="plains-desc">
+                            <h1>{{sub.description}}</h1>
+                        </div>
+                        <div class="plains-cta">
+                            <button>
+                                Contratar plano
+                            </button>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="subscription-branchs">
+                <img src="/assets/branch.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>

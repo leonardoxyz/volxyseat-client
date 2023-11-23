@@ -1,0 +1,56 @@
+@import url(https://db.onlinewebfonts.com/c/229a57bbeef591e04a1fdfe347c90864?family=Centra+No2);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+img {
+    min-height: 100%;
+    height: auto;
+}
+
+a,
+ul,
+li {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    font-size: 18px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    padding: 4rem;
+}
+
+div {
+    overflow: visible;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FB812C;
+    border-radius: 50px;
+}

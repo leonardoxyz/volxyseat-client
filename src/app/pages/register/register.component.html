@@ -1,0 +1,44 @@
+<div class="register-container">
+    <div class="register-context">
+        <div class="register-forms">
+            <div class="register-logo">
+                <img src="/assets/l2.png" alt="Logo da Sua Marca">
+            </div>
+            <div class="register-title">
+                <h1>Construindo o Futuro Online
+                    Experimente a Excelência Gratuitamente!</h1>
+            </div>
+
+            <div class="register-label">
+                <label for="name">Nome da Empresa:</label>
+                <input type="text" [(ngModel)]="newRegister.companyname" name="companyName" id="companyName" required>
+            </div>
+
+            <div class="register-label">
+                <label for="email">Email:</label>
+                <input type="email" [(ngModel)]="newRegister.email" name="email" id="email" required>
+            </div>
+
+            <div class="register-label">
+                <label for="password">Senha:</label>
+                <input type="password" [(ngModel)]="newRegister.password" name="password" id="password" required>
+            </div>
+
+            <div class="register-cta">
+                <div class="register-register-cta">
+                    <button type="submit" class="cta" (click)="registerAndLogin()">
+                        INICIAR SESSÃO
+                    </button>
+
+                    <div class="register-label register">
+                        <span>Já é membro VOLXY? <a href="/login">Faça login!</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="register-banner">
+        <img src="/assets/br2.png" alt="Banner de register">
+    </div>
+</div>

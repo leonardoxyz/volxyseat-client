@@ -1,0 +1,143 @@
+.about-title h1 {
+    color: #FB812C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.about-context {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 2rem;
+
+    flex-direction: column;
+    row-gap: 2rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-title span {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    width: 26%;
+}
+
+.about-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.about-subtitle span {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    width: 70%;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/3;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img img {
+    max-width: 100%;
+}
+
+.about-item {
+    border-radius: 10px;
+    background: rgba(251, 129, 44, 0.10);
+    max-width: 450px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    min-height: 320px;
+    min-width: 500px;
+}
+
+.dIcon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #FB812C;
+    color: white;
+}
+
+.dIcon svg {
+    height: 30px;
+    width: 30px;
+}
+
+.about-item p {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.about-context-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.about-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.about-cta button {
+    cursor: pointer;
+    padding: 17px 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #FB812C;
+    border: 0;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: all .5s ease;
+}
+
+.about-cta button:hover {
+    background-color: #FB812C;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #FB812C 0px 7px 29px 0px;
+}

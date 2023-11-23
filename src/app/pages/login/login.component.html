@@ -1,0 +1,41 @@
+<div class="login-container">
+    <div class="login-context">
+        <div class="login-forms">
+            <div class="login-logo">
+                <img src="/assets/l2.png" alt="Logo da Sua Marca">
+            </div>
+            <div class="login-title">
+                <h1>Acesse para ter acesso ao seus
+                    benefícios.</h1>
+            </div>
+
+            <div class="login-label">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required [(ngModel)]="loginRequest.email">
+            </div>
+
+            <div class="login-label">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" required [(ngModel)]="loginRequest.password">
+            </div>
+
+            <div class="login-cta">
+                <div class="login-login-cta">
+                    <button type="submit" class="cta" (click)="login()">
+                        INICIAR SESSÃO
+                    </button>
+
+                    <div class="login-label login">
+                        <span>Não possui uma conta? <a href="/register">Junte-se à VOLXYSEAT</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login-banner">
+        <img src="/assets/bl2.png" alt="Banner de Login">
+    </div>
+    <app-cookiepopup></app-cookiepopup>
+</div>
+

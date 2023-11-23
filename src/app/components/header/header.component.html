@@ -1,0 +1,35 @@
+<div class="header-component">
+  <div class="header-context">
+    <div class="header-right">
+      <div class="header-logo">
+        <img src="/assets/l2.png" alt="">
+      </div>
+    </div>
+    <div class="header-center">
+      <div class="header-item">
+        <ul>
+          <li>
+            <a href="#about">Sobre</a>
+            <a href="#prices">Preços</a>
+            <a href="">Inspiração</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-left">
+      <div class="header-login">
+        <div class="header-space"></div>
+        <div class="header-login-cta">
+          <ng-container *ngIf="isAuthenticated; else loginButtons">
+            <span class="header-username">{{ username }}</span>
+            <button (click)="logout()" class="cta-logout">Sair</button>
+          </ng-container>
+          <ng-template #loginButtons>
+            <a href="/login" class="cta-login">Entrar</a>
+            <a href="/register"><button class="cta-register">Junte-se a VOLXY</button></a>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

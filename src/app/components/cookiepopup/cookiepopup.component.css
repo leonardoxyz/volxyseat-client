@@ -1,0 +1,42 @@
+.cookie-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #212121;
+    z-index: 1000;
+    color: white;
+    width: 100%;
+    padding: 2rem;
+}
+
+.cookie-context {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cookie-context span {
+    color: #FB812C;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cookie-context button {
+    padding: 1rem;
+    border-radius: 10px;
+    background: #FB812C;
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 1436px) {
+    .cookie-context p {
+        max-width: 80%;
+    }
+}

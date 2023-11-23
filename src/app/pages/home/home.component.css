@@ -1,0 +1,93 @@
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.home-context {
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 936px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.home-title span {
+    color: #F06625;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.home-title h1 {
+    color: #F06625;
+    font-size: 64px;
+}
+
+.home-title h2 {
+    color: #FB7F28;
+    font-size: 128px;
+}
+
+.home-rocket img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.home-rocket {
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-title p {
+    width: 70%;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.home-cta {
+    overflow: visible;
+}
+
+.home-cta button {
+    cursor: pointer;
+    padding: 17px 40px;
+    border-radius: 10px;
+    color: white;
+    font-family: "Centra No2";
+    font-weight: 700;
+    background-color: #FB812C;
+    border: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+.home-cta button:hover {
+    background-color: #FB812C;
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 7px 29px 0px #FB812C;
+}
