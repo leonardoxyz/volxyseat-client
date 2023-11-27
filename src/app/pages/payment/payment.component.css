@@ -1,0 +1,106 @@
+.payment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    padding: 2rem;
+    border-radius: 10px;
+    flex-direction: column;
+    row-gap: 4rem;
+    max-width: 50%;
+}
+
+.payment-context {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.payment-sec {
+    min-height: 100vh;
+    gap: 4rem;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    background: rgba(255, 255, 255, 0.85);
+    height: 2.5rem;
+    width: 100%;
+    font-size: 1.4rem;
+    outline: none;
+    padding: 10px 16px;
+}
+
+.payment-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: #000;
+    font-family: "Centra No2";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.method-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 100%;
+}
+
+.method-context {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.method-container:hover {
+    border: 1px solid #fb812c;
+}
+
+.payment-confirm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.payment-confirm-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.payment-confirm-title h1 {
+    color: #fb812c;
+}
+
+.payment-space {
+    height: 1px;
+    min-width: 100%;
+    background-color: gray;
+}
+
+.payment-info {
+    max-width: 60%;
+}

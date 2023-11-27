@@ -21,8 +21,25 @@
         <div class="header-space"></div>
         <div class="header-login-cta">
           <ng-container *ngIf="isAuthenticated; else loginButtons">
-            <span class="header-username">{{ username }}</span>
-            <button (click)="logout()" class="cta-logout">Sair</button>
+            <span class="header-username">Olá,&ensp;{{ username }}</span>
+
+            <button mat-button [matMenuTriggerFor]="menu">
+              <i class="fa-solid fa-bars i" style="color: #fb812c;"></i>
+            </button>
+
+            <mat-menu #menu="matMenu">
+              <div class="i-cta">
+                <button mat-menu-item>
+                  Perfil
+                </button>
+                <button mat-menu-item (click)="logout()">
+                  Sair
+                </button>
+              </div>
+            </mat-menu>
+
+            
+
           </ng-container>
           <ng-template #loginButtons>
             <a href="/login" class="cta-login">Entrar</a>

@@ -17,4 +17,9 @@ export class SubscriptionService {
   getAll(header:HttpHeaders): Observable<Subscription[]> {
     return this.http.get<Subscription[]>(this.apiUrl, { headers: header });
   }
+
+  getDetalhesPlano(id: number, header: HttpHeaders): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<any>(url, { headers: header });
+  }
 }
