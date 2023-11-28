@@ -6,4 +6,5 @@ export class Subscription {
     price!: number;
     isActive!: boolean;
     isPopular!: boolean;
+    termInDays!: number;
 }

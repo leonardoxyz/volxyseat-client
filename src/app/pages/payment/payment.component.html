@@ -28,19 +28,24 @@
         <div class="method-title">
             <h1>Método de Pagamento</h1>
         </div>
-        <div class="payment-method">
-            <div class="method-container">
-                <h1><i class="fa-brands fa-pix" style="color: #fb812c;"></i></h1>
-            </div>
 
-            <div class="method-container">
-                <h1><i class="fa-solid fa-credit-card" style="color: #fb812c;"></i></h1>
+            <div class="payment-method">
+                <div class="method-container">
+                    <h1><i class="fa-brands fa-pix" style="color: #fb812c;"></i></h1>
+                </div>
+
+                <div class="method-container">
+                    <h1><i class="fa-solid fa-credit-card" style="color: #fb812c;"></i></h1>
+                </div>
             </div>
-        </div>
-        <div class="payment-info">
-            <p><i class="fa-solid fa-check" style="color: #fb812c;"></i> A VOLXYSEAT está comprometida em oferecer uma ótima experiência.
-                Por isso oferecemos uma garantia de 7 dias ou seu dinheiro de volta.
-            </p>
+            <div class="payment-content">
+            <div class="payment-info">
+                <p><i class="fa-solid fa-check" style="color: #fb812c;"></i> A VOLXYSEAT está comprometida em oferecer
+                    uma
+                    ótima experiência.
+                    Por isso oferecemos uma garantia de 7 dias ou seu dinheiro de volta.
+                </p>
+            </div>
         </div>
     </div>
 
@@ -48,12 +53,32 @@
     <div class="payment-confirm">
         <div class="payment-confirm-title">
             <span>Valor total</span>
-            <h1>R$159,90</h1>
+            <h1>R${{planoSelecionado.price}}</h1>
+            <div class="payment-security">
+                <i class="fa-solid fa-lock" style="color: #fb812c;"></i>
+                Pagamento Seguro
+            </div>
         </div>
-
         <div class="payment-space"></div>
 
-        
+        <div class="plains">
+            <div class="selected-plan-info" *ngIf="planoSelecionado">
+                <div class="plains-category">
+                    <span>{{planoSelecionado.type}}</span>
+                </div>
+                <div class="plains-price">
+                    <h1>R${{planoSelecionado.price}}<span>/mês</span></h1>
+                </div>
+                <div class="plains-desc">
+                    <h1>{{planoSelecionado.description}}</h1>
+                </div>
+            </div>
+        </div>
 
+
+
+        <div class="payment-cta">
+            <a><button>FINALIZAR</button></a>
+        </div>
     </div>
 </section>

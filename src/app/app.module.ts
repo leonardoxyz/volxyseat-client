@@ -30,7 +30,7 @@ import { PaymentComponent } from './pages/payment/payment.component';
     CookiepopupComponent,
     AboutComponent,
     FooterComponent,
-    PaymentComponent
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
