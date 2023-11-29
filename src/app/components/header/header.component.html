@@ -21,6 +21,7 @@
         <div class="header-space"></div>
         <div class="header-login-cta">
           <ng-container *ngIf="isAuthenticated; else loginButtons">
+            <span class="header-username">{{teste}}</span>
             <span class="header-username">Olá,&ensp;{{ username }}</span>
 
             <button mat-button [matMenuTriggerFor]="menu">

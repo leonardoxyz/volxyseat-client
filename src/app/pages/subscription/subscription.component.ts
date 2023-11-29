@@ -20,6 +20,7 @@ export class SubscriptionComponent {
   public subscriptions!: Subscription[];
 
   token: string | null = localStorage.getItem('token');
+  transaction: string | null = localStorage.getItem('transaction');
   headers = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': this.token ? `Bearer ${this.token}` : ''
@@ -36,7 +37,7 @@ export class SubscriptionComponent {
     );
   }
 
-  contratarPlano(selectedSubscription: any) {
+  signPlan(selectedSubscription: any) {
     this.subService.setPlano(selectedSubscription);
     this.router.navigate(['/payment']);
   }

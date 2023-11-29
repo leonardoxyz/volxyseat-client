@@ -26,6 +26,9 @@ export class SubscriptionService {
     return this.planoSelecionado.getValue();
   }
 
+  getById(id:string): any{
+    return this.http.get(`${this.apiUrl}/${id}`)
+  }
 
   getAll(header: HttpHeaders): Observable<Subscription[]> {
     return this.http.get<Subscription[]>(this.apiUrl, { headers: header });

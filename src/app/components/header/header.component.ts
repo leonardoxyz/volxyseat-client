@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LogOutService } from 'src/app/services/LogOut.service';
+import { SubscriptionService } from 'src/app/services/Subscription.service';
+import { TransactionsService } from 'src/app/services/transactions.service';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -11,9 +15,12 @@ export class HeaderComponent {
   isAuthenticated: boolean = false;
   isMenuOpen = false;
   isWideScreen = window.innerWidth > 930;
+  teste : string = ""
 
-  constructor(private logOutService: LogOutService) {
+
+  constructor(private logOutService: LogOutService, private tranService: TransactionsService, private subService: SubscriptionService) {
     this.checkUserLogin();
+    this.getSubscriptionId();
   }
 
   checkUserLogin() {
@@ -40,5 +47,53 @@ export class HeaderComponent {
       }
     );
   }
+
+  getTransaction(): Observable<any> {
+    return this.tranService.getById(localStorage.getItem("transactionId"));
+  }
+
+  // getSubscriptionId() {
+  //   this.getTransaction().subscribe(
+  //     (transaction: any) => {
+  //       console.log(transaction.subscription);
+  //       this.getSubscriptionById(transaction.subscription);
+  //     },
+  //     (error) => {
+  //       console.error(error);
+  //     }
+  //   );
+  // }
+
+  // getSubscriptionById(id:string) {
+  //   this.subService.getById(id).subscribe(
+  //     (result:any) => {
+  //       this.teste = result.name;
+  //       console.log(this.teste)
+  //       return result;
+  //     }
+  //   )
+  // }
+
+  getSubscriptionId() {
+    this.getTransaction().pipe(
+      switchMap((transaction: any) => {
+        console.log(transaction.subscription);
+        return this.getSubscriptionById(transaction.subscription);
+      })
+    ).subscribe(
+      (result: any) => {
+        this.teste = result.type;
+        console.log(result);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+  
+  getSubscriptionById(id: string): Observable<any> {
+    return this.subService.getById(id);
+  }
+
 }
 

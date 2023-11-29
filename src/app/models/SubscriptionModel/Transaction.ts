@@ -1,5 +1,5 @@
 export class Transaction {
-    client!: string;
-    subscription!: string;
-    termInDays!: number;
+    client?: string;
+    subscription?: string;
+    termInDays?: number;
 }

@@ -17,7 +17,7 @@ export class LoginComponent {
 
   public loginRequest: any = {
     email: '',
-    password: ''
+    password: '',
   };
 
   login() {
@@ -26,6 +26,7 @@ export class LoginComponent {
         console.log('Login bem-sucedido!', response);
         localStorage.setItem('token', response.token)
         localStorage.setItem('username', response.username);
+        localStorage.setItem("transactionId", response.transaction);
         this.router.navigate(['/']); 
       },
       (error: any) => {
