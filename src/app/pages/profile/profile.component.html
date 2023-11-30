@@ -1,0 +1,61 @@
+<section>
+    <app-header></app-header>
+</section>
+
+<div class="profile-title">
+    <span>Central de Configurações de - <b>{{username}}</b></span>
+    <p>Caso haja alguma informação incorreta, altere facilmente!</p>
+</div>
+
+<div class="profile-container">
+    <div class="profile-context">
+        <div class="profile-line"></div>
+
+        <div class="profile-options">
+            <button (click)="toggleProfile('profile')" [class.active]="profile === 'profile'">Perfil</button>
+            <button (click)="toggleProfile('acquisitions')"
+                [class.active]="profile === 'acquisitions'">Aquisições</button>
+        </div>
+    </div>
+
+    <div class="profile-main">
+        <div class="profile-content" *ngIf="profile === 'profile'">
+            <div class="register-label">
+                <label for="name">Nome da Empresa:</label>
+                <input type="text" name="companyName" id="companyName" placeholder={{username}}>
+            </div>
+
+            <div class="register-label">
+                <label for="name">Email:</label>
+                <input type="text" name="companyName" id="companyName" placeholder="{{ email }}">
+            </div>
+
+            <div class="register-label">
+                <label for="name">Senha:</label>
+                <input type="text" name="companyName" id="companyName" required>
+            </div>
+
+            <div></div>
+
+            <div class="profile-cta">
+                <button>Salvar</button>
+            </div>
+        </div>
+
+        <div class="profile-content" *ngIf="profile === 'acquisitions'">
+            <div class="transaction-details">
+                <p><strong>Assinatura Ativa:</strong> {{ isActive ? 'Sim' : 'Não' }}</p>
+                <p><strong>ID da Transação:</strong> {{ transaction.id }}</p>
+                <p><strong>Tempo restante: </strong>{{termInDays}} dias</p>
+                <p><strong>Tipo do Plano: </strong>{{type}}</p>
+            </div>
+
+            <div class="profile-cta">
+                <a href="/profile"><button>Retornar</button></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<app-footer class="app-footer"></app-footer>

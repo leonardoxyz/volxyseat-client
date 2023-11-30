@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { PaymentComponent } from './pages/payment/payment.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { SubscriptionService } from './services/Subscription.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { PaymentComponent } from './pages/payment/payment.component';
     AboutComponent,
     FooterComponent,
     PaymentComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { PaymentComponent } from './pages/payment/payment.component';
     MatMenuModule
 
   ],
-  providers: [],
+  providers: [SubscriptionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

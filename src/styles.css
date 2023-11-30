@@ -56,3 +56,14 @@ body::-webkit-scrollbar-thumb {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+input {
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    background: rgba(255, 255, 255, 0.85);
+    height: 2.5rem;
+    font-size: 1.4rem;
+    outline: none;
+    padding: 10px 16px;
+    width: 100%;
+}

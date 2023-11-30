@@ -38,4 +38,8 @@ export class SubscriptionService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<any>(url, { headers: header });
   }
+
+  getSubscriptionStatus(id: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/status/${id}`);
+  }
 }

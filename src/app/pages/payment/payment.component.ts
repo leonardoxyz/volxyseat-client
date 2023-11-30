@@ -1,4 +1,3 @@
-// payment.component.ts
 import { Component } from '@angular/core';
 import { Transaction } from 'src/app/models/SubscriptionModel/Transaction';
 import { SubscriptionService } from 'src/app/services/Subscription.service';
@@ -29,8 +28,6 @@ export class PaymentComponent {
         return response;
       }
     )
-
-
 }
 
   constructor(private subService: SubscriptionService, private tranService: TransactionsService) {
@@ -49,7 +46,6 @@ export class PaymentComponent {
     if(this.subId !== null && this.clientId !== null){
       this.newTransaction.client = this.clientId;
       this.newTransaction.subscription = this.subId;
-      this.newTransaction.termInDays = 123;
 
       this.tranService.post(this.newTransaction).subscribe(
         (response:any) => {
@@ -63,6 +59,5 @@ export class PaymentComponent {
     }else{
       console.log("Erro")
     }
-    
   }
 }

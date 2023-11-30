@@ -27,7 +27,8 @@ export class LoginComponent {
         localStorage.setItem('token', response.token)
         localStorage.setItem('username', response.username);
         localStorage.setItem("transactionId", response.transaction);
-        this.router.navigate(['/']); 
+        localStorage.setItem('email', response.email)
+        this.router.navigate(['/']);
       },
       (error: any) => {
         console.log('Erro ao fazer login!', error);

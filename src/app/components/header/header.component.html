@@ -21,7 +21,7 @@
         <div class="header-space"></div>
         <div class="header-login-cta">
           <ng-container *ngIf="isAuthenticated; else loginButtons">
-            <span class="header-username">{{teste}}</span>
+
             <span class="header-username">Olá,&ensp;{{ username }}</span>
 
             <button mat-button [matMenuTriggerFor]="menu">
@@ -30,16 +30,21 @@
 
             <mat-menu #menu="matMenu">
               <div class="i-cta">
-                <button mat-menu-item>
-                  Perfil
-                </button>
+                <a href="profile">
+                  <button mat-menu-item>
+                    Perfil
+                  </button>
+                </a>
                 <button mat-menu-item (click)="logout()">
                   Sair
                 </button>
               </div>
             </mat-menu>
 
-            
+            <div class="header-plain" *ngIf="teste">
+              <span class="plains-user">{{ teste }}</span>
+          </div>
+          
 
           </ng-container>
           <ng-template #loginButtons>
