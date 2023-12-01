@@ -16,10 +16,7 @@ body {
     scroll-behavior: smooth;
 }
 
-img {
-    min-height: 100%;
-    height: auto;
-}
+
 
 a,
 ul,
@@ -37,6 +34,7 @@ section {
     min-width: 100vh;
     padding: 4rem;
 }
+
 
 div {
     overflow: visible;

@@ -1,6 +1,6 @@
 .profile-line {
     width: 1px;
-    height: 56px;
+    height: 100%;
     background-color: black;
 }
 
@@ -96,4 +96,34 @@
     align-items: center;
     justify-content: center;
     width: 100px;
+}
+
+.profile-options button {
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+}
+
+.profile-options button:before {
+    background-color: #FB812C;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25, .8, .25, 1);
+    width: 0;
+}
+
+.profile-options button:hover:before {
+    background-color: #FB812C;
+    width: 3rem;
 }

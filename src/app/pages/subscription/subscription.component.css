@@ -56,12 +56,6 @@
     padding: 4rem;
 }
 
-.plains-context {
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid #D9D9D9;
-}
-
 .plains-cta button {
     cursor: pointer;
     padding: 1.5rem;
@@ -94,6 +88,9 @@
     padding: 2rem;
     max-width: 320px;
     bottom: 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    max-width: 320px;
 }
 
 .plains-category {
@@ -139,4 +136,27 @@
     align-items: center;
     justify-content: center;
     max-width: 100%;
+}
+
+@media screen and (max-width: 1488px){
+    .plains {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1106px) {
+    .subscription-title {
+        max-width: 50%;
+        text-align: center;
+    }
+
+    .plains {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 0 auto;
+    }
 }

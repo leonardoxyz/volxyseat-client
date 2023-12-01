@@ -1,7 +1,6 @@
 .home-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -13,6 +12,8 @@
     justify-content: center;
     flex-direction: column;
     max-width: 936px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .home-content {
@@ -46,16 +47,30 @@
     font-size: 128px;
 }
 
-.home-rocket img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: 100%;
-}
-
-.home-rocket {
+/* img{
     height: 100%;
     overflow: hidden;
+    display: block;
+} */
+
+@media screen and (max-width: 1570px){
+    .home-rocket {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 936px) {
+    .home-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-context {
+        padding: 2rem;
+    }
+
+    .home-rocket {
+        display: none;
+    }
 }
 
 .home-title p {

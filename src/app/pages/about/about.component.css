@@ -67,10 +67,6 @@
     gap: 2rem;
 }
 
-.about-img img {
-    max-width: 100%;
-}
-
 .about-item {
     border-radius: 10px;
     background: rgba(251, 129, 44, 0.10);
@@ -110,9 +106,6 @@
 }
 
 .about-context-all {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 4rem;
 }
 
@@ -140,4 +133,14 @@
     background-color: #FB812C;
     color: hsl(0, 0%, 100%);
     box-shadow: #FB812C 0px 7px 29px 0px;
+}
+
+@media screen and (max-width: 1620px){
+    .about-context {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
 }

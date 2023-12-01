@@ -23,7 +23,7 @@ img {
 
 .text-overlay {
     position: absolute;
-    width: 80%;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -107,4 +107,20 @@ img {
     text-align: center;
     color: white;
     font-size: 8px;
+}
+
+@media screen and (max-width: 1514px){
+    .text-overlay {
+        max-width: 100%;
+    }
+
+    .text-overlay h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 915px){
+    .text-overlay h1 {
+        font-size: 18px;
+    }
 }
